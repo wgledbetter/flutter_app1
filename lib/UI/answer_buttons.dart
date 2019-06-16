@@ -2,20 +2,21 @@ import 'package:flutter/material.dart';
 
 class AnswerButton extends StatelessWidget {
 
-  bool ans;
+  final bool _ans;
+  final VoidCallback _onTap;
 
-  AnswerButton(this.ans);
+  AnswerButton(this._ans, this._onTap);
 
   @override
   Widget build(BuildContext context){
     return new Expanded( // Filling button
       child: new Material(
-        color: ans == true ? Colors.greenAccent : Colors.redAccent,
+        color: _ans == true ? Colors.greenAccent : Colors.redAccent,
         child: new InkWell(
-          onTap: () => print(ans == true ? "TrueTap" : "FalseTap"),
+          onTap: () => _onTap(),
           child: new Center(
             child: new Container(
-              child: new Text(ans == true ? "TRUE" : "FALSE"),
+              child: new Text(_ans == true ? "TRUE" : "FALSE"),
             ),
           ),
         ),

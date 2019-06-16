@@ -24,6 +24,12 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
 
+  # Your additions
+  timeline_list: ^0.0.3
+  http: ^0.12.0+2
+  # firebase_auth: ^0.11.1+6
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
